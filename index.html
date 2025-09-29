@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Relámpago - Evento</title>
+    <link rel="stylesheet" href="css/styless.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>⚡ Startup Relámpago</h1>
+            <ul>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#registro">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Evento de Startups 2024</h2>
+            <p>Conecta, aprende y crece con los mejores emprendedores</p>
+            <button class="btn-primary" onclick="scrollToRegistro()">Registrarse</button>
+        </section>
+
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>9:00 AM</h3>
+                    <p>Registro y networking</p>
+                </div>
+                <div class="card">
+                    <h3>10:00 AM</h3>
+                    <p>Keynote: El futuro de las startups</p>
+                </div>
+                <div class="card">
+                    <h3>11:30 AM</h3>
+                    <p>Panel: Financiamiento</p>
+                </div>
+                <div class="card">
+                    <h3>1:00 PM</h3>
+                    <p>Almuerzo y networking</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="speakers">
+            <h2>Speakers</h2>
+            <div class="grid-container">
+                <div class="card speaker-card">
+                    <h3>Ana García</h3>
+                    <p>CEO TechStart</p>
+                </div>
+                <div class="card speaker-card">
+                    <h3>Carlos López</h3>
+                    <p>Investor VC Fund</p>
+                </div>
+                <div class="card speaker-card">
+                    <h3>María Rodríguez</h3>
+                    <p>CTO InnovateLab</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="registro">
+            <h2>Registro</h2>
+            <form id="registroForm">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Empresa" required>
+                <button type="submit" class="btn-primary">Registrarse</button>
+            </form>
+            <div id="mensaje" style="display: none;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Startup Relámpago. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
