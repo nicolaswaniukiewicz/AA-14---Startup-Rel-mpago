@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+// Variables para colores y estilos
+$primary-color: #6366f1;
+$secondary-color: #8b5cf6;
+$accent-color: #f59e0b;
+$dark-color: #1f2937;
+$light-color: #f8fafc;
+$text-color: #374151;
+$border-radius: 12px;
+$shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Mixins para botones y tarjetas como pide la consigna
+@mixin button-style($bg-color: $primary-color, $text-color: white) {
+  background: linear-gradient(135deg, $bg-color 0%, $secondary-color 100%);
+  color: $text-color;
+  padding: 14px 28px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: $shadow;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+    
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+@mixin card-style($bg-color: white) {
+  background: $bg-color;
+  border-radius: $border-radius;
+  padding: 30px;
+  box-shadow: $shadow;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary-color, $accent-color);
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+    border-color: $primary-color;
+  }
+}
+
+// Reset y estilos base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $light-color;
+}
+
+// Header moderno
+header {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: $shadow;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #fff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+main {
+  margin-top: 80px;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    color: $dark-color;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, $primary-color, $accent-color);
+      border-radius: 2px;
+    }
+  }
+}
+
+// Hero section impactante
+#hero {
+  text-align: center;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 50%, $accent-color 100%);
+  color: white;
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    &::after {
+      display: none; // No mostrar la línea decorativa en el hero
+    }
+  }
+  
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+}
+
+// Grid layout como pide la consigna
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+// Usando los mixins
+.card {
+  @include card-style();
+  
+  h3 {
+    color: $primary-color;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+  }
+}
+
+.speaker-card {
+  @include card-style(linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%));
+  text-align: center;
+  
+  h3 {
+    color: $dark-color;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+}
+
+.btn-primary {
+  @include button-style();
+}
+
+// Formulario elegante
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  
+  input {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+  }
+}
+
+footer {
+  background: $dark-color;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+#mensaje {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: $border-radius;
+  text-align: center;
+  display: none;
+  font-weight: 500;
+  
+  &.success {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    border: 2px solid #10b981;
+  }
+}
+
+// Animaciones
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+  
+  &:nth-child(2) { animation-delay: 0.1s; }
+  &:nth-child(3) { animation-delay: 0.2s; }
+  &:nth-child(4) { animation-delay: 0.3s; }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    
+    ul {
+      gap: 20px;
+    }
+  }
+  
+  #hero h2 {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
