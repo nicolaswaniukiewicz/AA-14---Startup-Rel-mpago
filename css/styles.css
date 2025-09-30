@@ -1,4 +1,3 @@
-/* Importando Google Fonts para mejor tipografía */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 /* Variables CSS */
@@ -353,4 +352,5 @@ footer {
     gap: 20px;
   }
 }
+
 
