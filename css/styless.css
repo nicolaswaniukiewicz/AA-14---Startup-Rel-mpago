@@ -1,7 +1,7 @@
 /* Importando Google Fonts para mejor tipografía */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
-/* Variables CSS mejoradas */
+/* Variables CSS */
 :root {
   --primary-color: #6366f1;
   --secondary-color: #8b5cf6;
@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-/* Mejorando tipografía y colores base */
+/* tipografía y colores base */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
@@ -28,7 +28,7 @@ body {
   background-color: var(--light-color);
 }
 
-/* Header más moderno con gradiente sutil */
+/* Header */
 header {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
@@ -50,7 +50,7 @@ nav {
   padding: 0 20px;
 }
 
-/* Logo más estilizado */
+/* Logo  */
 nav h1 {
   font-weight: 700;
   font-size: 1.5rem;
@@ -66,7 +66,7 @@ nav ul {
   gap: 30px;
 }
 
-/* Enlaces de navegación más elegantes */
+/* Enlaces de navegación */
 nav a {
   color: white;
   text-decoration: none;
@@ -91,7 +91,7 @@ section {
   margin: 0 auto;
 }
 
-/* Hero section más impactante */
+/* Hero */
 #hero {
   text-align: center;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
@@ -130,7 +130,7 @@ section {
   opacity: 0.9;
 }
 
-/* Títulos de sección más elegantes */
+/* Títulos de sección */
 section h2 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -164,7 +164,7 @@ section h2::after {
   margin-top: 50px;
 }
 
-/* Cards más modernas con mejor diseño (usando mixin compilado) */
+/* Cards usando mixin compilado */
 .card {
   background: white;
   border-radius: var(--border-radius);
@@ -200,7 +200,7 @@ section h2::after {
   font-size: 1.25rem;
 }
 
-/* Speaker cards con diseño especial */
+/* Speaker cards */
 .speaker-card {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   text-align: center;
@@ -218,7 +218,7 @@ section h2::after {
   font-size: 1.1rem;
 }
 
-/* Botones más atractivos (usando mixin compilado) */
+/* Botones usando mixin compilado */
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
@@ -254,7 +254,7 @@ section h2::after {
   box-shadow: var(--shadow-lg);
 }
 
-/* Formulario más elegante */
+/* Formulario */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -282,7 +282,7 @@ form input:focus {
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-/* Footer más moderno */
+/* Footer */
 footer {
   background: var(--dark-color);
   color: white;
@@ -306,7 +306,7 @@ footer {
   border: 2px solid #10b981;
 }
 
-/* Animaciones sutiles */
+/* Animaciones  */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -328,7 +328,7 @@ footer {
   animation-delay: 0.3s;
 }
 
-/* Responsive mejorado */
+/* Responsive */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -353,3 +353,4 @@ footer {
     gap: 20px;
   }
 }
+
