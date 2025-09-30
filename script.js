@@ -1,5 +1,3 @@
-// JavaScript básico como pide la consigna
-
 // Función para scroll suave al registro
 function scrollToRegistro() {
   document.getElementById("registro").scrollIntoView({
@@ -55,7 +53,7 @@ function mostrarMensaje(texto, tipo) {
   }, 3000)
 }
 
-// Efecto de hover en las tarjetas (JavaScript adicional)
+// Efecto de hover en las tarjetas 
 document.querySelectorAll(".card").forEach((card) => {
   card.addEventListener("mouseenter", function () {
     this.style.boxShadow = "0 5px 20px rgba(0,0,0,0.2)"
@@ -66,7 +64,7 @@ document.querySelectorAll(".card").forEach((card) => {
   })
 })
 
-// Contador simple para el evento (funcionalidad extra)
+// Contador simple para el evento 
 function iniciarContador() {
   const fechaEvento = new Date("2024-12-15T09:00:00")
 
