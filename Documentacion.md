@@ -28,9 +28,9 @@
 - Efectos hover en tarjetas
 
 ## Características Implementadas
-✅ Grid layout para agenda y speakers
-✅ Mixins SCSS para botones y tarjetas
-✅ JavaScript interactivo para formularios
-✅ Navegación suave
-✅ Validación de formulario
-✅ Efectos hover y animaciones básicas
+Grid layout para agenda y speakers
+Mixins SCSS para botones y tarjetas
+JavaScript interactivo para formularios
+Navegación suave
+Validación de formulario
+Efectos hover y animaciones básicas
