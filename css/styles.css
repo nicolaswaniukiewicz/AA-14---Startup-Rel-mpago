@@ -163,7 +163,7 @@ section h2::after {
   margin-top: 50px;
 }
 
-/* Cards usando mixin compilado */
+/* Cards */
 .card {
   background: white;
   border-radius: var(--border-radius);
@@ -217,7 +217,7 @@ section h2::after {
   font-size: 1.1rem;
 }
 
-/* Botones usando mixin compilado */
+/* Botones*/
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
@@ -352,5 +352,6 @@ footer {
     gap: 20px;
   }
 }
+
 
 
